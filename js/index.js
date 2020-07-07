@@ -42,7 +42,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //add text to nav bar //
-let navBar = document.getElementsByTagName('a')
+let navBar = document.querySelectorAll('a')
 console.log(navBar)
 
 navBar[0].textContent = 'Services'
@@ -60,7 +60,7 @@ console.log(logoImg)
 
 //add text to h1 //
 let h1 = document.querySelector('h1')
-h1.textContent = 'DOM IS AWESOME'
+h1.innerHTML = '<h1>DOM<br> Is<br> Awesome</h1>'
 console.log(h1)
 
 //add text to button //
@@ -113,7 +113,7 @@ h4Contact.textContent = 'Contact'
 //add text to p in "contact"//
 let pContact = document.querySelectorAll('.contact p')
 console.log(pContact)
-pContact[0].textContent = '123 Way 456 Street, Somewhere, USA'
+pContact[0].innerHTML = '<p>123 Way 456 Street<br>Somewhere, USA</p>'
 pContact[1].textContent = '1 (888) 888-8888'
 pContact[2].textContent = 'sales@greatidea.io'
 
@@ -121,3 +121,38 @@ pContact[2].textContent = 'sales@greatidea.io'
 let pFooter = document.querySelector('footer p')
 console.log(pFooter)
 pFooter.textContent = 'Copyright Great Idea! 2018'
+
+//change color of nav text to green//
+let navItems = document.querySelectorAll('.container a')
+console.log(navItems)
+navItems.forEach((greenColor) =>{
+  return greenColor.style.color ='green'
+})
+
+//create new blog link using `.appendChild()`
+// make the element
+const newBlogLink = document.createElement('a')
+// give it text (if applies)
+newBlogLink.textContent = 'Shop'
+// set its attributes
+newBlogLink.href = '#'
+// append to an existing element in the DOM
+let nav = document.querySelector('.container nav')
+nav.appendChild(newBlogLink)
+console.log(newBlogLink)
+
+
+//create new blog link using `.prepend()`
+const newBlogLinkTwo = document.createElement('a')
+newBlogLinkTwo.textContent = 'Login'
+newBlogLinkTwo.href = '#'
+nav.prepend(newBlogLinkTwo)
+console.log(newBlogLinkTwo)
+
+//STRETCH - add styles throughout//
+h1.style.border = '2px dotted black'
+h1.style.padding = '50px'
+pFooter.style.background = 'pink'
+pFooter.style.padding = '50px'
+pFooter.style.border = '2px solid black'
+pFooter.style.color = 'red'
