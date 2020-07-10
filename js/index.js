@@ -83,8 +83,8 @@ h4Top[1].textContent = 'About'
 //add text to p in "top-content"//
 let pTop = document.querySelectorAll('.top-content p')
 console.log(pTop)
-pTop[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-pTop[1].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+pTop[0].textContent = siteContent['main-content']['features-content'];
+pTop[1].textContent = siteContent['main-content']['about-content'];
 
 //add img src to '#middle-img' //
 let middleImg = document.getElementById('middle-img')
@@ -101,9 +101,9 @@ h4Bottom[2].textContent = 'Vision'
 //add text to p in "bottom-content"//
 let pBottom = document.querySelectorAll('.bottom-content p')
 console.log(pBottom)
-pBottom[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-pBottom[1].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-pBottom[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+pBottom[0].textContent = siteContent['main-content']['services-content'];
+pBottom[1].textContent = siteContent['main-content']['product-content'];
+pBottom[2].textContent = siteContent['main-content']['vision-content'];
 
 //add text to h4 in "contact"//
 let h4Contact = document.querySelector('.contact h4')
